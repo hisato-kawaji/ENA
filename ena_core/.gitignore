@@ -1,0 +1,8 @@
+*.pyc 
+
+ena_core/settings.py
+
+*.log
+*.pot
+*.pyc
+local_settings.py
