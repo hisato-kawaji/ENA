@@ -1,24 +1,15 @@
 class GathersController < ApplicationController
   before_action :set_gather, only: [:show, :edit, :update, :destroy]
 
-  # GET /gathers
-  # GET /gathers.json
-  def index
-    @gathers = Gather.all
-  end
-
   # GET /gathers/1
   # GET /gathers/1.json
   def show
+    @gathers = Gather.all
   end
 
   # GET /gathers/new
   def new
     @gather = Gather.new
-  end
-
-  # GET /gathers/1/edit
-  def edit
   end
 
   # POST /gathers
@@ -54,7 +45,15 @@ class GathersController < ApplicationController
   # DELETE /gathers/1
   # DELETE /gathers/1.json
   def destroy
-    @gather.destroy
+    respond_to do |format|
+      format.html { redirect_to gathers_url }
+      format.json { head :no_content }
+    end
+  end
+
+  # RECOVER /gathers/1
+  # RECOVER /gathers/1.json
+  def recover
     respond_to do |format|
       format.html { redirect_to gathers_url }
       format.json { head :no_content }

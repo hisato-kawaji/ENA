@@ -1,0 +1,2 @@
+module Gathers::SettingHelper
+end

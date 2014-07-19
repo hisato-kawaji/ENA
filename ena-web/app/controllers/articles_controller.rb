@@ -3,13 +3,13 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   # GET /articles.json
-  def index
+  def list
     @articles = Article.all
   end
 
   # GET /articles/1
   # GET /articles/1.json
-  def show
+  def detail
   end
 
   # GET /articles/new
@@ -54,7 +54,6 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    @article.destroy
     respond_to do |format|
       format.html { redirect_to articles_url }
       format.json { head :no_content }

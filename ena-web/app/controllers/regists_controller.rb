@@ -1,12 +1,6 @@
 class RegistsController < ApplicationController
   before_action :set_regist, only: [:show, :edit, :update, :destroy]
 
-  # GET /regists
-  # GET /regists.json
-  def index
-    @regists = Regist.all
-  end
-
   # GET /regists/1
   # GET /regists/1.json
   def show
@@ -54,7 +48,6 @@ class RegistsController < ApplicationController
   # DELETE /regists/1
   # DELETE /regists/1.json
   def destroy
-    @regist.destroy
     respond_to do |format|
       format.html { redirect_to regists_url }
       format.json { head :no_content }

@@ -1,9 +1,14 @@
 EnaWeb::Application.routes.draw do
+  resources :recommends
+
   resources :gathers
+  resources :gathers_setting
 
   resources :articles
 
   resources :regists
+  
+  resources :mypage
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
