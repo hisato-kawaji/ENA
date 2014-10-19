@@ -1,0 +1,11 @@
+= form_for(@recommend) do |f|
+  - if @recommend.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@recommend.errors.count, "error")
+        prohibited this recommend from being saved:
+      %ul
+        - @recommend.errors.full_messages.each do |msg|
+          %li= msg
+  .actions
+    = f.submit

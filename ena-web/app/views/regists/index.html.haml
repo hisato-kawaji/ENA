@@ -1,0 +1,15 @@
+%h1 Listing regists
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+  %tbody
+    - @regists.each do |regist|
+      %tr
+        %td= link_to 'Show', regist
+        %td= link_to 'Edit', edit_regist_path(regist)
+        %td= link_to 'Destroy', regist, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Regist', new_regist_path
